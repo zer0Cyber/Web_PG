@@ -63,13 +63,13 @@ if($status==false) {
      <label>Login ID：<input type="text" name="lid" value="<?=$res["lid"]?>"></label><br>
      <label>Login PW<input type="text" name="lpw"  value="<?=$res["lpw"]?>"></label><br>
      <label>管理FLG：
-      一般（学生）<input type="radio" name="kanri_flg" value="0" <?php if( !empty($_GET['kanri_flg']) && $_GET['kanri_flg']==="0"){ echo 'checked'; } ?>>
-      管理者（先生）<input type="radio" name="kanri_flg" value="1" <?php if( !empty($_GET['kanri_flg']) && $_GET['kanri_flg']==="1"){ echo 'checked'; } ?>>
+      一般（学生）<input type="radio" name="kanri_flg" value="0" <?php if($res['kanri_flg']==="0"){ echo 'checked'; } ?>>
+      管理者（先生）<input type="radio" name="kanri_flg" value="1" <?php if($res['kanri_flg']==="1"){ echo 'checked'; } ?>>
     </label>
     <br>
      <label>在学FLG：
-      在学<input type="radio" name="life_flg" value="0" <?php if( !empty($_GET['life_flg']) && $_GET['life_flg']==="0"){ echo 'checked'; } ?>>
-      卒業<input type="radio" name="life_flg" value="1" <?php if( !empty($_GET['life_flg']) && $_GET['life_flg']==="1"){ echo 'checked'; } ?>>
+      在学<input type="radio" name="life_flg" value="0" <?php if($res['life_flg']==="0"){ echo 'checked'; } ?>>
+      卒業<input type="radio" name="life_flg" value="1" <?php if($res['life_flg']==="1"){ echo 'checked'; } ?>>
     </label>
     <br>
     <input type="hidden" name="id" value="<?=$id?>">

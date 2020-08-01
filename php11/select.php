@@ -1,13 +1,13 @@
 <?php
-//session_start();
+session_start();
 
 
-//if(!isset($_SESSION["chk_ssid"]) || $_SESSION["chk_ssid"]!=session_id()){
-//    exit("Login Error");
-//}else{
-//    session_regenerate_id(true);
-//    $_SESSION["chk_ssid"] = session_id();
-//}
+if(!isset($_SESSION["chk_ssid"]) || $_SESSION["chk_ssid"]!=session_id()){
+   exit("Login Error");
+}else{
+   session_regenerate_id(true);
+   $_SESSION["chk_ssid"] = session_id();
+}
 
 
 //(7回目授業/8回目授業)
@@ -54,6 +54,8 @@ if($status==false) {
 <title>アンケート：一覧表示画面</title>
 </head>
 <body>
+<button><a href="logout.php">logout</a></button>
+<!-- <a href="logout.php">logout</a> -->
 <?php
    //表示用変数
    echo $view;
